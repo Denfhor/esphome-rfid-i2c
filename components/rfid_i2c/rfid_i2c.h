@@ -11,7 +11,6 @@ class RFID_I2C : public PollingComponent {
 
   void update() override {
     uint8_t data = 0;
-
     if (Wire.requestFrom(0x28, 1) == 1) {
       data = Wire.read();
       value_sensor->publish_state(data);
