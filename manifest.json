@@ -1,0 +1,9 @@
+{
+  "name": "rfid_i2c",
+  "version": "1.0.0",
+  "files": {
+    "components/rfid_i2c/__init__.py": "components/rfid_i2c/__init__.py",
+    "components/rfid_i2c/rfid_i2c.h": "components/rfid_i2c/rfid_i2c.h",
+    "components/rfid_i2c/rfid_i2c.cpp": "components/rfid_i2c/rfid_i2c.cpp"
+  }
+}
