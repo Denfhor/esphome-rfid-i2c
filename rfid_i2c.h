@@ -1,19 +1,22 @@
 #pragma once
-#include "esphome.h"
+
+#include "esphome/core/component.h"
+#include "esphome/components/sensor/sensor.h"
+#include "esphome/core/log.h"
+#include "Wire.h"
+
+namespace esphome {
+namespace rfid_i2c {
 
 class RFID_I2C : public PollingComponent {
  public:
-  Sensor *value_sensor = new Sensor();
+  sensor::Sensor *value_sensor = new sensor::Sensor();
 
   RFID_I2C() : PollingComponent(100) {}
 
-  void setup() override {}
-
-  void update() override {
-    uint8_t data = 0;
-    if (Wire.requestFrom(0x28, 1) == 1) {
-      data = Wire.read();
-      value_sensor->publish_state(data);
-    }
-  }
+  void setup() override;
+  void update() override;
 };
+
+}  // namespace rfid_i2c
+}  // namespace esphome
