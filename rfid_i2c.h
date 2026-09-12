@@ -19,4 +19,3 @@ class RFID_I2C : public PollingComponent {
 
 }  // namespace rfid_i2c
 }  // namespace esphome
-
