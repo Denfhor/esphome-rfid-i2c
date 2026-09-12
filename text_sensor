@@ -1,0 +1,4 @@
+text_sensor:
+  - platform: template
+    id: rfid_uid
+    name: "RFID UID"
